@@ -1,12 +1,32 @@
 {% extends 'base.html' %}
-{% load bootstrap %}
+{% load static %}
 
+{% block style %}<link rel="stylesheet" href="{% static 'css/login.css'%}"><link/>{% endblock %}
 {% block tittle %}Login{% endblock tittle %}
 {% block main %}
-    <h1>Login</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form|bootstrap}}
-        <button type="submit" class="btn btn-primary">Login</button>
-    </form>
+    <div class="main">
+        <div class="loginContainer">
+            <img src="{% static 'img/DefaultLogin.jpg' %}" alt="Girl in a jacket" class="mainImage">
+            <div class="formCard">
+                <div class="logo">
+                    <img src="{% static 'img/default_logo.png' %}" alt="logo" class="logo" width="30" height="30">
+                </div>
+                {% if form.errors %}
+                    <p>Your username and password didn't match. Please try again.</p>
+                {% endif %}
+                <form method="post" action={% url 'login' %}>
+                    <p class="formTitle">Sign into your account</p>
+                    <div class='form-group'>
+                        <input class="form-control" type="text" name="username" placeholder="Username">
+                    </div>
+                    <div class='form-group'>
+                        <input class="form-control" type="password" name="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="loginButton">Login</button>
+                    <a href={% url "login" %} class="forgotPassword">Forgot password?</a>
+                </form>
+                <p class="register">Dont have an account? <a href={% url 'login' %}>Register Here</a></p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

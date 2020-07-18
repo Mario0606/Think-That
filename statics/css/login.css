@@ -1,0 +1,79 @@
+.main {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+
+.loginContainer {
+    display: flex;
+    background-color: #ffffff;
+    height: 50%;
+    width: 40%;
+    border-radius: 16px;
+    overflow: hidden;
+    align-content: stretch;
+    font-family: 'sans-serif';
+}
+
+p {
+    margin: 10px 0px;
+}
+
+.mainImage {
+    max-width: 40%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.formCard {
+    flex: 1;
+    align-self: stretch;
+    padding: 10% 5% 0% 5%;
+}
+
+.logo {
+    margin-bottom: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.loginButton {
+    transition-duration: 0.2s;
+    background-color: #0b65db;
+    color: #fff;
+    border-radius: 5px;
+    border-style: none;
+    margin-bottom: 2px;
+}
+
+.loginButton:hover {
+    background-color: #000;
+}
+
+.forgotPassword {
+    font-size: small;
+    color: darkgrey;
+}
+
+.forgotPassword:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.formTitle {
+    font-size: large;
+}
+
+.register {
+    color: #007bff;
+    font-size: small;
+}
