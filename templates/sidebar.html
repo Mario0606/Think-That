@@ -5,22 +5,24 @@
     <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Think That</h3>
+                <img src="{% static 'img/Logo.png' %}" alt="logo" class="logo" width="200" height="80">
             </div>
             <ul class="list-unstyled components">
-                <li class="active">
+                <li>
+                    <i class="fa fa-picture-o" aria-hidden="true"></i>
                     <a>Kanban Room</a>
                 </li>
                 <li>
+                    <i class="fa fa-leanpub" aria-hidden="true"></i>
                     <a>Thoughts Room</a>
                 </li>
             </ul>
         </nav>
         <div id="content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
+                <div class="container">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info color">
+                        <i class="fa fa-bars"></i>
                         <span>Think That</span>
                     </button>
                 </div>

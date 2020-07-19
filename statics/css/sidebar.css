@@ -46,19 +46,19 @@ a:focus {
 
 #sidebar {
     /* don't forget to add all the previously mentioned styles here too */
-    background: #0b65db;
-    color: #fff;
+    background: #ffffff;
+    color: black;
     transition: all 0.3s;
 }
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #0b65db;
+    background: #ffffff;
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 1px;
 }
 
 #sidebar ul p {
@@ -66,25 +66,52 @@ a:focus {
     padding: 10px;
 }
 
-#sidebar ul li a {
+#sidebar ul a {
     padding: 10px;
     font-size: 1.1em;
     display: block;
 }
 
+#sidebar li {
+    padding: 10px;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
 #sidebar ul li a:hover {
-    color: #0b65db;
+    color: #417690;
     background: #fff;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #0b65db;
+    background: #ffffff;
 }
 
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #0b65db;
+    background: #417690;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.color {
+    background-color: #417690;
+    border: none;
+}
+
+.color:hover {
+    background: #000000;
+    background-color: #000000;
+    border: none;
+}
+
+.color:focus {
+    box-shadow: none;
 }
