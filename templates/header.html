@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}<link rel="stylesheet" href="{% static 'css/header.css'%}"><link/>{% endblock %}
+{% block main %}
+<div id="header">
+    <div class="Logo">
+        <img src="{% static 'img/logo2.png' %}" alt="logo" class="logo" width="200" height="80">
+    </div>
+    <div class="clientPlace">
+        <button>
+            <img href="{{ user.profile_photo}}"  width="200" height="80">
+            <p>{{ user.username }}</p>
+        </button>
+    </div>
+</div>
+{% endblock %}
