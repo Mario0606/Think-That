@@ -1,4 +1,22 @@
 #header {
     display: flex;
     justify-content: space-between;
+    height: 10%;
+}
+
+.clientPlace {
+    width: 10%;
+    height: auto;
+    margin-right: 40px;
+}
+
+.clientPlace a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.clientPlace a img {
+    margin: 5px;
 }
