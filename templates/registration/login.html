@@ -8,7 +8,7 @@
             <img src="{% static 'img/DefaultLogin.jpg' %}" alt="Girl in a jacket" class="mainImage">
             <div class="formCard">
                 <div class="logo">
-                    <img src="{% static 'img/logo2.png' %}" alt="logo" class="logo" width="200" height="80">
+                    <img src="{% static 'img/logo3.png' %}" alt="logo" class="logo" width="200" height="80">
                 </div>
                 {% if form.errors %}
                     <p>Your username and password didn't match. Please try again.</p>
@@ -23,7 +23,7 @@
                         <input class="form-control" type="password" name="password" placeholder="Password">
                     </div>
                     <button type="submit" class="loginButton">Login</button>
-                    <a href={% url "login" %} class="forgotPassword">Forgot password?</a>
+                    <a href={% url "login" %} class="btn btn-light">Forgot password?</a>
                 </form>
                 <p class="register">Dont have an account? <a href={% url 'login' %}>Register Here</a></p>
             </div>

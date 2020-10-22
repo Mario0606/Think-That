@@ -1,8 +1,10 @@
+@import "constants.css";
+
 #header {
     display: flex;
     justify-content: space-between;
     height: 10%;
-    background-color: #17a2b8;
+    background-color: var(--color-secundary);
 }
 
 .clientPlace {

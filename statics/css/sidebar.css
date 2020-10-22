@@ -4,9 +4,11 @@
 }
 
 #sidebar {
-    min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
+    background-color: var(--color-primary);
+    transition: all 0.3s;
+    
 }
 
 #sidebar.active {
@@ -22,20 +24,6 @@
     }
 }
 
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
-}
-
-p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-    color: #999;
-}
-
 a,
 a:hover,
 a:focus {
@@ -44,16 +32,9 @@ a:focus {
     transition: all 0.3s;
 }
 
-#sidebar {
-    /* don't forget to add all the previously mentioned styles here too */
-    background: #ffffff;
-    color: black;
-    transition: all 0.3s;
-}
-
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #ffffff;
+    background: var(--color-primary);
 }
 
 #sidebar ul.components {
@@ -62,7 +43,7 @@ a:focus {
 }
 
 #sidebar ul p {
-    color: #fff;
+    color: var(--color-primary-dark);
     padding: 10px;
 }
 
@@ -80,38 +61,16 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-    color: #417690;
-    background: #fff;
-}
-
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-    color: #fff;
-    background: #ffffff;
+    color: var(--color-primary-light);
 }
 
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #417690;
+    background: var(--color-primary);
 }
 
 #img {
     width: 100%;
     height: auto;
-}
-
-.color {
-    background-color: #417690;
-    border: none;
-}
-
-.color:hover {
-    background: #000000;
-    background-color: #000000;
-    border: none;
-}
-
-.color:focus {
-    box-shadow: none;
 }
