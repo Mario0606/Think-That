@@ -6,11 +6,14 @@
     <div class="Logo">
         <img src="{% static 'img/logo3.png' %}" alt="logo" class="logo" width="200" height="80">
     </div>
-    <div class="clientPlace">
-        <a class="userModal">
+    <div class="dropdown show">
+        <a class="" href="#" role="button" id="profileMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img src="media/{{ user.user.profile_photo }}" width="200" height="80">
-            <p>{{ user.username }}</p>
+            {{ user.username }}
         </a>
+        <div class="dropdown-menu" aria-labelledby="profileMenu">
+          <a class="dropdown-item" href={% url 'logout'%}>logout</a>
+        </div>
     </div>
 </div>
 {% endblock %}
