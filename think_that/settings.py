@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrapform',
     'livereload',
-    'user',
-    'home',
+    'apps.user',
+    'apps.home',
 ]
 
 MIDDLEWARE = [
