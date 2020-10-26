@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'livereload',
     'apps.user',
     'apps.home',
+    'apps.kanban',
 ]
 
 MIDDLEWARE = [
