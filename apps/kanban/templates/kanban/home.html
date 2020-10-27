@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+{% endblock style %}
+{% block main %}
+    {% include 'header.html' %}
+    <style>
+        .draggable { width: 150px; height: 150px; padding: 0.5em; }
+    </style>
+    <div class="container-fluid">
+        <div class="row flex-row flex-nowrap " style="overflow-x: scroll;">
+            {% for table in tables %}
+                <div class="col-xl-4" style="background-color:{{ table.kanban_style.color }};">
+                    <h2>{{ table.name }}</h2>
+                    <div class="activities" style="background-color: aqua;">
+                        {% for activity in table.activity_set.all %}
+                            <div class="ui-widget-content draggable">
+                                <p>{{ activity.name }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+{% block js %}<script src={% static 'js/home.js' %}></script>{% endblock %}

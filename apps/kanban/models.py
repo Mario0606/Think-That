@@ -43,7 +43,7 @@ class Kanban(models.Model):
 class Activity(models.Model):
     name = models.CharField(max_length=100, help_text="activity name")
     tags = models.ManyToManyField(Tag, blank=True)
-    Activity = models.ForeignKey(
+    kanban = models.ForeignKey(
         Kanban, blank=True, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
