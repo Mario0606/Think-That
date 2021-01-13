@@ -42,8 +42,8 @@ class Kanban(models.Model):
 
 class Activity(models.Model):
     name = models.CharField(max_length=100, help_text="activity name")
-    tags = models.ManyToManyField(Tag, blank=True, null=True)
-    Activity = models.ForeignKey(Kanban, on_delete=models.SET_DEFAULT)
+    tags = models.ManyToManyField(Tag)
+    kanban = models.ForeignKey(Kanban, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
