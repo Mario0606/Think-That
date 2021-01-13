@@ -26,7 +26,7 @@ SECRET_KEY = 'v5$4(249eoyhz))u-9_^227aj*wp=2u_7ql)*(lpd5ik@r3meu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'livereload',
     'apps.user',
     'apps.home',
+    'apps.kanban'
 ]
 
 MIDDLEWARE = [
@@ -86,8 +87,8 @@ DATABASES = {
         'NAME': 'think_that',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '127.0.0.1',
-        'PORT': '',
+        'HOST': 'db',
+        'PORT': 5432,
     }
 }
 
