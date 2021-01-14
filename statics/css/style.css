@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.think-that-form button,
+.think-that-form p {
+    font-size: large;
+    margin-left: 25vw;
+}
+
+.think-that-form button {
+    color: var(--color-text-in-primary);
+}
+
+.think-that-form label,
+.think-that-form input {
+    color: var(--color-primary-dark);
+}
