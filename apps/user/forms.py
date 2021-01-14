@@ -1,6 +1,5 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from think_that.settings import DATE_INPUT_FORMATS
 from django.contrib.auth.models import User
 
 
